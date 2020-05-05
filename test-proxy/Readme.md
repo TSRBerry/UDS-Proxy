@@ -3,15 +3,25 @@
 ## Content:
 
   -  <a href="#what">What does it do?</a>
+  
     - <a href="#server">Server Mode</a>
+    
     - <a href="#cleint">Client Mode</a>
+    
   - <a href="#how">How does it work?</a>
+  
   - <a href="#setup">Setup</a>
+  
     - <a href="#requirements">Requirements</a>
+    
       - <a href="#hardware">Hardware and OS Requirements</a>
+      
       - <a href="#linux">Linux packages</a>
+      
       - <a href="#python">Python packages</a>
+      
   - <a href="#local-setup">My own testing setup</a>
+  
   - <a href="#todo">TODO</a>
 
 ## What does it do? {#what}
