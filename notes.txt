@@ -1,0 +1,23 @@
+Broadcast packets on channel 11
+  iw wlan0mon set channel 11
+channel changed but stays the same during broadcast?
+
+  Data:
+    Beacon frame
+    Data
+
+Beacon frame:
+  Differences:
+    timestamp
+      2 types of timestamps:
+        del test.timestamp
+        del test[2].timestamp
+    mac_timestamp
+      del test.mac_timestamp
+    frame check sequence
+      del test[1].fcs
+        this thing is the only thing that will be recalced - maybe I shouldn't delete the others then
+
+replacing mac addr did not work
+  replace it with normal mac?
+  or spoof it and be the Nintendo
