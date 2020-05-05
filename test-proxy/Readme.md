@@ -1,19 +1,33 @@
 # Local test proxy for Nintendo local multiplayer (adhoc)
 
-## What does it do?
+## Content:
 
-### Server-mode
+  -  <a href="#what">What does it do?</a>
+    - <a href="#server">Server Mode</a>
+    - <a href="#cleint">Client Mode</a>
+  - <a href="#how">How does it work?</a>
+  - <a href="#setup">Setup</a>
+    - <a href="#requirements">Requirements</a>
+      - <a href="#hardware">Hardware and OS Requirements</a>
+      - <a href="#linux">Linux packages</a>
+      - <a href="#python">Python packages</a>
+  - <a href="#local-setup">My own testing setup</a>
+  - <a href="#todo">TODO</a>
+
+## What does it do? {#what}
+
+### Server-mode {#server}
 The host of the game creates a socketserver with an encryption key and sets the mac of the console.
 The script scans for the specific channel that the Nintendo is sending on and configures the wireless device.
 The MTU gets raised to 1800 because some Nintendo packets were too big and caused Errno 90.
 
-### Client-mode
+### Client-mode {#client}
 First the client needs to set the mac address of the console, so no other traffic gets redirected.
 The client connects to the socket of the host and needs to enter the generated encryption key.
 As soon as the connection is established both Server and Client start sniffing and sending packets.
 The client will use the channel that the host is using as well.
 
-## How does it do that?
+## How does it do that? {#how}
 
 I am using Python3 Scapy in order to sniff and send packets via the wireless device.
 
@@ -32,17 +46,17 @@ Until now I never saw a Nintendo packet in the log so I am quite sure that this 
 
 And that's it! (At the moment)
 
-## Setup
+## Setup {#setup}
 
-### Requirements
+### Requirements {#requirements}
 
-### Hardware and OS
+#### Hardware and OS {#hardware}
 
   - Wifi adapter with monitor mode
   - Another method (probably lan) in order to connect to host/client
   - Linux (I am sure it works with Debian/Ubuntu as I am using it but other distros should work too)
 
-### Linux Requirements
+#### Linux Requirements {#linux}
   
   - net-tools (ifconfig)
   
@@ -56,7 +70,7 @@ One line:
 
 > sudo apt install net-tools aircrack-ng -y
   
-### Python Requirements
+#### Python Requirements {#python}
 
   - Python 3.8 (because I am using socket.create_server which was added in 3.8)
   - Scapy
@@ -71,7 +85,7 @@ One line:
 
 > python3.8 -m pip install scapy pycryptodome
 
-## My local testing setup:
+## My local testing setup: {#local-setup}
 
   - 1 Ubuntu x64 pc (for development and controlling ssh sessions)
     - connected via LAN
@@ -84,11 +98,12 @@ One line:
     - one is the host and the other is searching for players to join
     - I figured adhoc hasn't changed and Nintendo still uses it so if it works with this setup every Nintendo console should work that supports adhoc mode.
 
-## TODO:
+## TODO: {#todo}
 
 - [x] Proxy traffic from host to client console
 - [ ] Find out how Nintendo discovers other local multiplayer hosts
 - [ ] Find a way to make it happen with this script
 - [ ] Make this script more stable (crashes should always set everything to normal state)
 - [ ] add command line arguments (testing feels so slow without it)
+- [ ] add Windows support (will be hard as there will be a lot of problems with monitor mode)
 - [ ] Do you even write AES_GCM and sockets that way??
