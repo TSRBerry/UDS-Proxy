@@ -1,4 +1,4 @@
-# Local test proxy for Nintendo local multiplayer (adhoc)
+# Test proxy for Nintendo local multiplayer (adhoc)
 
 ## Content:
 
