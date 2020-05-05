@@ -2,26 +2,16 @@
 
 ## Content:
 
-  -  <a href="#What-does-it-do?">What does it do?</a>
-  
+  -  <a href="#What-does-it-do?">What does it do?</a> 
    - <a href="#Server-mode">Server Mode</a>
-    
    - <a href="#Client-mode">Client Mode</a>
-    
   - <a href="#How-does-it-do-that?">How does it work?</a>
-  
   - <a href="#Setup">Setup</a>
-  
     - <a href="#Requirements">Requirements</a>
-    
       - <a href="#Hardware-and-OS">Hardware and OS Requirements</a>
-      
       - <a href="#Linux-Requirements">Linux packages</a>
-      
       - <a href="#Python-Requirements">Python packages</a>
-      
   - <a href="#My-local-testing-setup">My own testing setup</a>
-  
   - <a href="#TODO">TODO</a>
 
 ## What does it do?
