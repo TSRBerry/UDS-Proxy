@@ -3,7 +3,7 @@ Attempt to proxy the nifi-traffic to another place but failed | understanding ho
 
 ## What is the goal of this project?
 
-I want to understand how Nintendo uses adhoc networks in order to setup local multiplayer sessions.
+I want to understand how Nintendo uses adhoc networks to setup local multiplayer sessions.
 In order to challenge my (non-existent) knowledge I want to create a proxy that allows me to play with my friends if they are a room away from me.
 This proxy should be able to pick up every Nintendo packet from my console and send it to the other console via LAN and a wifi-adapter.
 
